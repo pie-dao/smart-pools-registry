@@ -1,0 +1,17 @@
+{
+  "name": "@pie-dao/smart-pools-registry",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/MickdeGraaf/smart-pools-registry.git",
+  "author": "Mick de Graaf <mick@mickdegraaf.nl>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "npx buidler compile --config buidler.compile.config.ts"
+  },
+  "dependencies": {
+    "@nomiclabs/buidler": "^1.4.3",
+    "@openzeppelin/contracts": "^3.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
