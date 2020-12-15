@@ -6,7 +6,8 @@
   "author": "Mick de Graaf <mick@mickdegraaf.nl>",
   "license": "MIT",
   "scripts": {
-    "compile": "npx buidler compile --config buidler.compile.config.ts"
+    "compile": "npx buidler compile --config buidler.compile.config.ts",
+    "remix": "remixd -s . --remix-ide https://remix.ethereum.org"
   },
   "dependencies": {
     "@nomiclabs/buidler": "^1.4.3",

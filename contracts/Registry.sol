@@ -13,7 +13,7 @@ contract SmartPoolRegistry is IRegistry, Ownable {
         inRegistry[_smartPool] = true;
     }
 
-    function removeSmartPool(uint256 _index) external override onlyOwner {
+    function removeSmartPool(uint256 _index) public override onlyOwner {
         address registryAddress = entries[_index];
 
         inRegistry[registryAddress] = false;
@@ -23,5 +23,14 @@ contract SmartPoolRegistry is IRegistry, Ownable {
         // Pop last one off
         entries.pop();
     }
-
+    
+    function removeSmartPoolByAddress(address _address) external override onlyOwner {
+        // Search for pool and remove it if found. Otherwise do nothing
+        for(uint256 i = 0; i < entries.length; i ++) {
+            if(_address == entries[i]) {
+                removeSmartPool(i);
+                break;
+            }
+        }   
+    }
 }
